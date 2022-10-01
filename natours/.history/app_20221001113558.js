@@ -40,12 +40,7 @@ app.get('/api/v1/tours/:id', (req, res) => {
             message: 'Invalid Id',
         });
     }
-    res.status(200).json({
-        status: 'success',
-        data: {
-            tour,
-        },
-    });
+    res.status(200).send('Done');
 });
 
 app.post('/api/v1/tours', (req, res) => {
