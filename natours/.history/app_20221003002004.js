@@ -1,27 +1,17 @@
 const fs = require('fs');
 const express = require('express');
-const morgan = require('morgan');
+const { application } = require('express');
+const { request } = require('http');
+const { networkInterfaces } = require('os');
 
 const app = express();
-
-// 1)MIDDLEWARE
-app.use(morgan('dev'));
 app.use(express.json());
-
-app.use((req, res, next) => {
-    req.requestTime = new Date().toLocaleTimeString();
-    next();
-});
-
 const tours = JSON.parse(
     fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 );
-
-// 2) ROUTE HANDLERS
 const getAllTours = (req, res) => {
     res.status(200).json({
         status: 'success',
-        dateRequest: req.requestTime,
         results: tours.length,
         data: {
             tours,
@@ -85,24 +75,16 @@ const createTour = (req, res) => {
         }
     );
 };
-// // Read
-// app.get('/api/v1/tours', getAllTours);
-// app.get('/api/v1/tours/:id', getTour);
-// // Update
-// app.patch('/api/v1/tours/:id', updateTour);
-// // Delete
-// app.delete('/api/v1/tours/:id', deleteTour);
-// // Create
-// app.post('/api/v1/tours', createTour);
+// Read
+app.get('/api/v1/tours', getAllTours);
+app.get('/api/v1/tours/:id', getTour);
+// Update
+app.patch('/api/v1/tours/:id', updateTour);
+// Delete
+app.delete('/api/v1/tours/:id', deleteTour);
+// Create
+app.post('/api/v1/tours', createTour);
 
-// 3) ROUTES
-app.route('/api/v1/tours').get(getAllTours).post(createTour);
-app.route('/api/v1/tours/:id')
-    .get(getTour)
-    .patch(updateTour)
-    .delete(deleteTour);
-
-// 4) START SERVER
 const port = 3000;
 app.listen(port, () => {
     console.log(`App running on port ${port}`);
