@@ -79,4 +79,5 @@
     - Đầu tiên mình tạo 1 file có phần mở rộng là `.env` đặt trong thư mục gốc của app
     - Cài package `dotenv` bằng lệnh `npm i dotenv`
     - Thêm dòng `require('dotenv').config({path: '<đường dẫn đến file .env'})`
-
+### 21. Setting up ESLint +  Prettier in VS Code
+  `npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react --save-dev`
