@@ -69,7 +69,7 @@
   > **Static files** - tập tin tĩnh là các file HTML, CSS, Image, Javascript. Các file tĩnh này có nội dung không thay đổi khi người dùng Request tới nó => vì vậy nó không cần phải tạo bất cứ yêu cầu nào thông quan MVC Middleware mà chỉ cần trả về nôi dung là ok. <br>
   * Cú phát của nó: `express.static(root, [option])`<br>
   * Trong đó: **root** thông thường là truyền vào là đường dẫn đến thư mục chứa các static file; **option** là các đối só tùy chọn
-### 20. Environment Variables**
+### 20. Environment Variables
   - Biến môi trường là một giá trị có thể ảnh hưởng đến cách các quy trình đang chạy sẽ hoạt động trên máy tính. Chúng là một phần của môi trường mà một tiến trình chạy.
   - Sử dụng biến môi trường để:<br>
     - Giấu đi các thông tin bí mật (username, password) trong file `.env`, không được commit thông qua git
