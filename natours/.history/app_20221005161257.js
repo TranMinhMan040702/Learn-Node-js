@@ -5,7 +5,6 @@ const app = express();
 const tourRouter = require(`${__dirname}/routes/tourRouter`);
 const userRouter = require(`${__dirname}/routes/userRouter`);
 // 1)MIDDLEWARE
-console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
