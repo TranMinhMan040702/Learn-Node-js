@@ -73,7 +73,7 @@
   - Biến môi trường là một giá trị có thể ảnh hưởng đến cách các quy trình đang chạy sẽ hoạt động trên máy tính. Chúng là một phần của môi trường mà một tiến trình chạy.
   - Sử dụng biến môi trường để:<br>
     - Giấu đi các thông tin bí mật (username, password) trong file `.env`, không được commit thông qua git
-    - Tận dụng để chuyển qua lại giữa các môt trường ứng với các mục đích khác nhau (proc, dev, test)
+    - Tận dụng để chuyển qua lại giữa các môt trường ứng với các mục đích khác nhau (prod, dev, test)
   - `process.evn` là 1 object chứa tất cả các thông tin về môi trường (máy tính) mà Node.js đang chạy để xem được các thông tin đó mình sử dùng dòng lệnh `console.log(process.env)` vào file khởi nguồn của ứng dụng<br>
   - Để thêm dữ liệu vào `process.env` thì:<br>
     - Đầu tiên mình tạo 1 file có phần mở rộng là `.env` đặt trong thư mục gốc của app
