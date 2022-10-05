@@ -12,7 +12,6 @@ exports.checkID = (req, res, next, val) => {
             message: 'Invalid Id',
         });
     }
-    next();
 };
 
 exports.getAllTours = (req, res) => {
