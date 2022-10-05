@@ -1,0 +1,11 @@
+{
+    "prettier/prettier": [
+        "off",
+        {
+            "singleQuote": true,
+            "parser": "flow"
+        }
+    ],
+    "semi": true,
+    "tabWidth": 4
+}
