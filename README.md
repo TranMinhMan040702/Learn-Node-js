@@ -81,3 +81,13 @@
     - Thêm dòng `require('dotenv').config({path: '<đường dẫn đến file .env'})`
 ### 21. Setting up ESLint +  Prettier in VS Code
   `npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react --save-dev`
+  
+## Introduction to MongoDB
+### 1. What the MongDB
+- MongoDB là một document database với khả năng mở rộng (scalability) và sự linh hoạt (flexibility)
+  - Document based: MongoDB lưu dữ liệu dạng documents (NoSQL)
+  - Scalable: rất dễ dàng để phân phối dữ liệu trên nhiều máy khi người dùng và lượng dữ liệu tăng lên
+  - Flexible: không cần có **schema**, vì vậy mỗi document có số lượng và loại trường khác nhau
+  - Performant: mô hình dữ liệu nhúng, lập chỉ mục, phân tích, tài liệu linh hoạt, sao chép bản địa
+  - Miễn phí và open-source
+- BSON là mã hóa nhị phân của các tài liệu giống như JSON mà MongoDB ѕử dụng khi lưu trữ tài liệu trong các bộ ѕưu tập. Nó bổ ѕung hỗ trợ cho các loại dữ liệu như Ngàу ᴠà nhị phân không được hỗ trợ trong JSON
