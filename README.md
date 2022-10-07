@@ -91,3 +91,31 @@
   - Performant: mô hình dữ liệu nhúng, lập chỉ mục, phân tích, tài liệu linh hoạt, sao chép bản địa
   - Miễn phí và open-source
 - BSON là mã hóa nhị phân của các tài liệu giống như JSON mà MongoDB ѕử dụng khi lưu trữ tài liệu trong các bộ ѕưu tập. Nó bổ ѕung hỗ trợ cho các loại dữ liệu như Ngàу ᴠà nhị phân không được hỗ trợ trong JSON
+### 2. Installing MongoDB on Windows
+- Vào trang chủ của MongDB `https://www.mongodb.com/` tại tab `Products` chọn `Community Server`
+- Sau đó chọn version và tải về. Nên chọn version `4.` để thao tác được trên cmd
+- Sau khi tải thành công tiến hành install vào máy 
+- Để chạy Mongo DB Server tại `C:\Program Files\MongoDB\Server\4.0\bin` chạy file `mongod.exe` 
+- Để dễ dàng sử dụng trên cmd chúng ta nên cài đặt biến môi trường cho nó
+- Sau đó chạy file `mongo.exe` đế có thể thao tác với database
+### 3. Một số lệnh cơ bản trong MongoDB khi sử dụng Cmd
+`use <DatabaseName>` => Để tạo database trong MongoDB <br>
+`db` => xem database đang sử dụng <br>
+`show dbs` => xem tất cả database trên hệ thống <br>
+`db.<collectionName>.insertOne({})` => tạo một document trong collection <br>
+`db.<collectionName>.insertMany([{}, {}, . . .])` => tạo nhiều document trong collection <br>
+- Các câu lệnh truy vấn
+`db.<collectionName>.find()` => lấy tất cả dữ liệu trong collection <br>
+`db.<collectionName>.find(<codition>)` => lấy dữ liệu theo điều kiện truyền vào <br>
+```
+  **Cú pháp:**
+  Bằng(Equality)                        |     { key: value }
+  Nhỏ hơn (Less Than)                   |     { key: {$lt: value} }
+  Nhỏ hơn bằng (Less Than Equals)       |     { key: {$lte: value} }
+  Lơn hơn (Greater Than)                |     { key: {$gt: value} }
+  Lớn hơn bằng (Greater Than Equals)    |     { key: {$gte: value} }
+  Khác (Not Equals)                     |     { key: {$ne: value} }
+  Trong (In)                            |     { key: {$in: [value1, value2,..]} }
+  Không Thuộc (Not In)                  |     { key: {$nin: [value1, value2,..]} }
+  Hoặc (OR)                             |     { $or: [ {key: {<condition>}}, {key: {<condition>}} ] }
+ ```
