@@ -39,19 +39,7 @@ const tourSchema = new mongoose.Schema({
     description: {
         type: String,
         trim: true,
-        required: [true, 'A tour must have a description'],
     },
-    imageCover: {
-        type: String,
-        required: [true, 'A tour must have a image cover'],
-    },
-    images: [String],
-    createdAt: {
-        type: Date,
-        // eslint-disable-next-line new-cap
-        default: Date.now(),
-    },
-    startDates: [Date],
 });
 const Tour = mongoose.model('Tour', tourSchema);
 module.exports = Tour;
